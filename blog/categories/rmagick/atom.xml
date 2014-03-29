@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rmagick | Nícolas Lazarte Kaqui]]></title>
+  <link href="http://nicolaslazartekaqui.github.io/blog/categories/rmagick/atom.xml" rel="self"/>
+  <link href="http://nicolaslazartekaqui.github.io/"/>
+  <updated>2014-03-29T03:04:36-03:00</updated>
+  <id>http://nicolaslazartekaqui.github.io/</id>
+  <author>
+    <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
+    <email><![CDATA[nicolaslazartekaqui@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby - Solving Error to Install Gem Rmagick in Debian]]></title>
+    <link href="http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/"/>
+    <updated>2013-03-21T12:58:00-03:00</updated>
+    <id>http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian</id>
+    <content type="html"><![CDATA[<p>Trying to install the rmagic gem I received this error</p>
+
+<pre><code>$ gem install rmagick -v '2.13.2'
+</code></pre>
+
+<!-- more -->
+
+
+<p>``` bash
+Installing rmagick (2.13.2) with native extensions
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.</p>
+
+<pre><code>    /home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby extconf.rb 
+</code></pre>
+
+<p>checking for Ruby version >= 1.8.5&hellip; yes
+checking for /usr/bin/gcc&hellip; yes
+checking for Magick-config&hellip; no
+Can&rsquo;t install RMagick 2.13.2. Can&rsquo;t find Magick-config in /home/nicolas/.rbenv/versions/1.9.3-p0/bin:/usr/lib/rbenv/libexec:/home/nicolas/.rbenv/plugins/ruby-build/bin:/home/nicolas/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_05:/home/nicolas/bin:/usr/local/java/jre1.7.0_05</p>
+
+<p><strong><em> extconf.rb failed </em></strong>
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.</p>
+
+<p>Provided configuration options:
+  &mdash;with-opt-dir
+  &mdash;without-opt-dir
+  &mdash;with-opt-include
+  &mdash;without-opt-include=${opt-dir}/include
+  &mdash;with-opt-lib
+  &mdash;without-opt-lib=${opt-dir}/lib
+  &mdash;with-make-prog
+  &mdash;without-make-prog
+  &mdash;srcdir=.
+  &mdash;curdir
+  &mdash;ruby=/home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby</p>
+
+<p>Gem files will remain installed in /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2 for inspection.
+Results logged to /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2/ext/RMagick/gem_make.out
+An error occurred while installing rmagick (2.13.2), and Bundler cannot continue.
+Make sure that <code>gem install rmagick -v '2.13.2'</code> succeeds before bundling.
+```</p>
+
+<p>This error occurs because of missing the necessary library to compile the rmagick. In Debian (I use SID/UNSTABLE version) to fix this error you must install the library <code>libmagickwand-dev</code>.</p>
+
+<pre><code>$ sudo aptitude install libmagickwand-dev
+</code></pre>
+
+<p>Done, now you can install the gem rmagick and continue working happy. (:</p>
+]]></content>
+  </entry>
+  
+</feed>

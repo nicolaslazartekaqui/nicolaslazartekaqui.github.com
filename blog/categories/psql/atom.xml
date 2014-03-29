@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Psql | Nícolas Lazarte Kaqui]]></title>
+  <link href="http://nicolaslazartekaqui.github.io/blog/categories/psql/atom.xml" rel="self"/>
+  <link href="http://nicolaslazartekaqui.github.io/"/>
+  <updated>2014-03-29T03:04:36-03:00</updated>
+  <id>http://nicolaslazartekaqui.github.io/</id>
+  <author>
+    <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
+    <email><![CDATA[nicolaslazartekaqui@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Postgres - How to Work With Dump]]></title>
+    <link href="http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump/"/>
+    <updated>2013-03-21T13:27:00-03:00</updated>
+    <id>http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump</id>
+    <content type="html"><![CDATA[<p>Simple tip.</p>
+
+<h4>Exporting</h4>
+
+<p>To save one specific database in a dumpfiles, just do</p>
+
+<pre><code>$ pg_dump -U username dbname -f dumpfile.sql
+</code></pre>
+
+<p>or all databases</p>
+
+<pre><code>$ pg_dumpall -U username &gt; dumpfile.sql
+</code></pre>
+
+<h4>Importing</h4>
+
+<p>To import a sql dump in postgres, do</p>
+
+<pre><code>$ psql -d dbname -U username -f dumpfile.sql
+</code></pre>
+
+<p>Done, now you can save and recover your database. (:</p>
+]]></content>
+  </entry>
+  
+</feed>

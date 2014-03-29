@@ -1,6 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>
+            http://nicolaslazartekaqui.github.io/blog/2013/02/25/git-stash-your-modifications/
+        </loc>
+        <lastmod>2014-03-29T02:43:25-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nicolaslazartekaqui.github.io/blog/2013/02/26/github-fork-a-repo/</loc>
+        <lastmod>2014-03-29T02:43:25-03:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/
+        </loc>
+        <lastmod>2014-03-29T02:43:25-03:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump/
+        </loc>
+        <lastmod>2014-03-29T02:43:25-03:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://nicolaslazartekaqui.github.io/blog/2013/03/21/vim-convert-text-to-lowercase-or-uppercase/
+        </loc>
+        <lastmod>2014-03-29T02:43:25-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nicolaslazartekaqui.github.io/blog/2014/03/29/octopress-how-to-update/</loc>
+        <lastmod>2014-03-29T02:43:25-03:00</lastmod>
+    </url>
+    <url>
         <loc>http://nicolaslazartekaqui.github.io/blog/archives/</loc>
         <lastmod>2014-03-29T02:43:25-03:00</lastmod>
     </url>

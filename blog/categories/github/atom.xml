@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Github | Nícolas Lazarte Kaqui]]></title>
+  <link href="http://nicolaslazartekaqui.github.io/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://nicolaslazartekaqui.github.io/"/>
+  <updated>2014-03-29T03:04:36-03:00</updated>
+  <id>http://nicolaslazartekaqui.github.io/</id>
+  <author>
+    <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
+    <email><![CDATA[nicolaslazartekaqui@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Github - Fork a Repo]]></title>
+    <link href="http://nicolaslazartekaqui.github.io/blog/2013/02/26/github-fork-a-repo/"/>
+    <updated>2013-02-26T10:17:00-03:00</updated>
+    <id>http://nicolaslazartekaqui.github.io/blog/2013/02/26/github-fork-a-repo</id>
+    <content type="html"><![CDATA[<p>Quick tip (:</p>
+
+<p>This <a href="https://help.github.com/articles/fork-a-repo">link</a> [1] shows how to do a fork of a project and other tips to help contribute with the open source projects from Github.</p>
+
+<p>[1] <a href="https://help.github.com/articles/fork-a-repo">https://help.github.com/articles/fork-a-repo</a></p>
+]]></content>
+  </entry>
+  
+</feed>
