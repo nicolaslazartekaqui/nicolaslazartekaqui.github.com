@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Nícolas Lazarte Kaqui]]></title>
+  <link href="http://nicolaslazartekaqui.github.io/atom.xml" rel="self"/>
+  <link href="http://nicolaslazartekaqui.github.io/"/>
+  <updated>2014-03-29T02:57:23-03:00</updated>
+  <id>http://nicolaslazartekaqui.github.io/</id>
+  <author>
+    <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
+    <email><![CDATA[nicolaslazartekaqui@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
