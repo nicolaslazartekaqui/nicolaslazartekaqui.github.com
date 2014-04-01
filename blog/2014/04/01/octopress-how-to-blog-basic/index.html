@@ -5,33 +5,18 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ruby - Solving Error to Install Gem Rmagick in Debian - Nícolas Lazarte Kaqui</title>
+  <title>Octopress - How to Blog (Basic) - Nícolas Lazarte Kaqui</title>
   <meta name="author" content="Nícolas Lazarte Kaqui">
 
   
-  <meta name="description" content="Trying to install the rmagic gem I received this error $ gem install rmagick -v '2.13.2' 1
+  <meta name="description" content="docs for coders Mode details? Read [:documentation]. Posts 1
 2
 3
 4
 5
 6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23 &hellip;">
+# create
+$ bundle exec rake new_post[&quot;Octopress - How to blog (basic)& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -40,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian">
+  <link rel="canonical" href="http://nicolaslazartekaqui.github.io/blog/2014/04/01/octopress-how-to-blog-basic">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Nícolas Lazarte Kaqui" type="application/atom+xml">
@@ -100,7 +85,7 @@
   
   <header>
     
-      <h1 class="entry-title">Ruby - Solving Error to Install Gem Rmagick in Debian</h1>
+      <h1 class="entry-title">Octopress - How to Blog (Basic)</h1>
     
     
       <p class="meta">
@@ -116,22 +101,35 @@
   
 
 
-<time datetime="2013-03-21T12:58:00-03:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
+<time datetime="2014-04-01T16:26:39-03:00" pubdate data-updated="true">Apr 1<span>st</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Trying to install the rmagic gem I received this error</p>
+<div class="entry-content"><p><strong>docs for coders</strong></p>
 
-<pre><code>$ gem install rmagick -v '2.13.2'
-</code></pre>
+<p>Mode details? Read [:documentation].</p>
 
-<!-- more -->
+<h3>Posts</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># create</span>
+</span><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake new_post<span class="o">[</span><span class="s2">&quot;Octopress - How to blog (basic)&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="c"># Creating new post: source/_posts/2014-04-01-octopress-how-to-blog-basic.markdown</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># write</span>
+</span><span class='line'><span class="nv">$ </span>vi <span class="nb">source</span>/_posts/2014-04-01-octopress-how-to-blog-basic.markdown
+</span></code></pre></td></tr></table></div></figure>
 
 
-
+<h3>Pages</h3>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -143,69 +141,32 @@
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>Installing rmagick <span class="o">(</span>2.13.2<span class="o">)</span> with native extensions
-</span><span class='line'>Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># create with friend url (blog/about)</span>
+</span><span class='line'><span class="nv">$ </span>rake new_page<span class="o">[</span>about<span class="o">]</span>
+</span><span class='line'><span class="c"># creates /source/about/index.markdown</span>
 </span><span class='line'>
-</span><span class='line'>        /home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby extconf.rb
-</span><span class='line'>checking <span class="k">for </span>Ruby version &gt;<span class="o">=</span> 1.8.5... yes
-</span><span class='line'>checking <span class="k">for</span> /usr/bin/gcc... yes
-</span><span class='line'>checking <span class="k">for </span>Magick-config... no
-</span><span class='line'>Can<span class="s1">&#39;t install RMagick 2.13.2. Can&#39;</span>t find Magick-config in /home/nicolas/.rbenv/versions/1.9.3-p0/bin:/usr/lib/rbenv/libexec:/home/nicolas/.rbenv/plugins/ruby-build/bin:/home/nicolas/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_05:/home/nicolas/bin:/usr/local/java/jre1.7.0_05
+</span><span class='line'><span class="c"># create without friend url (blog/about.html)</span>
+</span><span class='line'><span class="nv">$ </span>rake new_page<span class="o">[</span>about.mardown<span class="o">]</span>
+</span><span class='line'><span class="c"># creates /source/about.markdown</span>
 </span><span class='line'>
-</span><span class='line'>*** extconf.rb failed ***
-</span><span class='line'>Could not create Makefile due to some reason, probably lack of
-</span><span class='line'>necessary libraries and/or headers.  Check the mkmf.log file <span class="k">for </span>more
-</span><span class='line'>details.  You may need configuration options.
-</span><span class='line'>
-</span><span class='line'>Provided configuration options:
-</span><span class='line'>  --with-opt-dir
-</span><span class='line'>  --without-opt-dir
-</span><span class='line'>  --with-opt-include
-</span><span class='line'>  --without-opt-include<span class="o">=</span><span class="k">${</span><span class="nv">opt</span><span class="p">-dir</span><span class="k">}</span>/include
-</span><span class='line'>  --with-opt-lib
-</span><span class='line'>  --without-opt-lib<span class="o">=</span><span class="k">${</span><span class="nv">opt</span><span class="p">-dir</span><span class="k">}</span>/lib
-</span><span class='line'>  --with-make-prog
-</span><span class='line'>  --without-make-prog
-</span><span class='line'>  --srcdir<span class="o">=</span>.
-</span><span class='line'>  --curdir
-</span><span class='line'>  --ruby<span class="o">=</span>/home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>Gem files will remain installed in /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2 <span class="k">for </span>inspection.
-</span><span class='line'>Results logged to /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2/ext/RMagick/gem_make.out
-</span><span class='line'>An error occurred <span class="k">while </span>installing rmagick <span class="o">(</span>2.13.2<span class="o">)</span>, and Bundler cannot <span class="k">continue</span>.
-</span><span class='line'>Make sure that <span class="sb">`</span>gem install rmagick -v <span class="s1">&#39;2.13.2&#39;</span><span class="sb">`</span> succeeds before bundling.
+</span><span class='line'><span class="c"># write</span>
+</span><span class='line'><span class="nv">$ </span>vi <span class="nb">source</span>/...
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>This error occurs because of missing the necessary library to compile the rmagick. In Debian (I use SID/UNSTABLE version) to fix this error you must install the library <code>libmagickwand-dev</code>.</p>
+<h3>Preview</h3>
 
-<pre><code>$ sudo aptitude install libmagickwand-dev
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake preview
+</span><span class='line'><span class="c"># acess http://localhost:4000</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Done, now you can install the gem rmagick and continue working happy. (:</p>
+
+<h3>Deploy</h3>
+
+<p>$ bundle exec rake generate
+$ bundle exec rake deploy</p>
 </div>
 
 
@@ -228,12 +189,12 @@
   
 
 
-<time datetime="2013-03-21T12:58:00-03:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
+<time datetime="2014-04-01T16:26:39-03:00" pubdate data-updated="true">Apr 1<span>st</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/debian/'>debian</a>, <a class='category' href='/blog/categories/rmagick/'>rmagick</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/rubygems/'>rubygems</a>
+    <a class='category' href='/blog/categories/docsforcoders/'>docsforcoders</a>, <a class='category' href='/blog/categories/octopress/'>octopress,</a>
   
 </span>
 
@@ -242,7 +203,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/" data-via="nicolaslazartek" data-counturl="http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nicolaslazartekaqui.github.io/blog/2014/04/01/octopress-how-to-blog-basic/" data-via="nicolaslazartek" data-counturl="http://nicolaslazartekaqui.github.io/blog/2014/04/01/octopress-how-to-blog-basic/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -255,10 +216,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/26/github-fork-a-repo/" title="Previous Post: Github - Fork A Repo">&laquo; Github - Fork A Repo</a>
+        <a class="basic-alignment left" href="/blog/2014/03/29/octopress-how-to-update/" title="Previous Post: Octopress - How to update">&laquo; Octopress - How to update</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/03/21/postgres-how-to-work-with-dump/" title="Next Post: Postgres - How to work with dump">Postgres - How to work with dump &raquo;</a>
       
     </p>
   </footer>
@@ -362,8 +321,8 @@ Included file 'asides/twitter.html' not found in _includes directory
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/';
-        var disqus_url = 'http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/';
+        var disqus_identifier = 'http://nicolaslazartekaqui.github.io/blog/2014/04/01/octopress-how-to-blog-basic/';
+        var disqus_url = 'http://nicolaslazartekaqui.github.io/blog/2014/04/01/octopress-how-to-blog-basic/';
         var disqus_script = 'embed.js';
       
     (function () {
