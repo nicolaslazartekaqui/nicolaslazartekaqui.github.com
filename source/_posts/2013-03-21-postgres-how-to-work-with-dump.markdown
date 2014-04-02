@@ -3,25 +3,27 @@ layout: post
 title: "Postgres - How to work with dump"
 date: 2013-03-21 13:27
 comments: true
-categories: psql
+categories: postgres, docsforcoders
 ---
 
-Simple tip.
+### SQL
 
 #### Exporting
 
-To save one specific database in a dumpfiles, just do
+one base
 
     $ pg_dump -U username dbname -f dumpfile.sql
 
-or all databases
+all bases
 
     $ pg_dumpall -U username > dumpfile.sql
 
 #### Importing
 
-To import a sql dump in postgres, do
+one base
 
     $ psql -d dbname -U username -f dumpfile.sql
 
-Done, now you can save and recover your database. (:
+all bases
+
+    $ psql -U username -f dumpfile.sql
