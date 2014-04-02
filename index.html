@@ -9,12 +9,7 @@
   <meta name="author" content="Nícolas Lazarte Kaqui">
 
   
-  <meta name="description" content="Continuing with my awesome sinatra project. Adding a response in json format. Gemfile $ vi Gemfile Gemfile1
-2
-3
-4
-5
-source &quot;https://rubygems.org &hellip;">
+  <meta name="description" content="Best way to learn? Building. Buiding a simple application with ramaze and deploy in heroku to remember what is current month :). Ramaze Using &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +81,111 @@ source &quot;https://rubygems.org &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/04/02/ramaze-starting/">Ramaze - Starting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-02T00:35:33-03:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Best way to learn? Building.</p></blockquote>
+
+<p>Buiding a simple application with <a href="http://ramaze.net/">ramaze</a> and deploy in <a href="http://heroku.com">heroku</a> to remember what is current month :).</p>
+
+<h3>Ramaze</h3>
+
+<p>Using framework generator to create your app.</p>
+
+<pre><code>$ gem install ramaze
+$ ramaze create currentmonth
+$ bundle install
+$ cd currentmonth
+</code></pre>
+
+<h3>Removing examples</h3>
+
+<pre><code>$ rm -rf layout public view/index.xhtml controller/main.rb
+</code></pre>
+
+<p>If we need the files, then we create.</p>
+
+<h3>Coding</h3>
+
+<pre><code>$ vi controller/main.rb
+</code></pre>
+
+<figure class='code'><figcaption><span>controller.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">MainController</span> <span class="o">&lt;</span> <span class="no">Controller</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>    <span class="vi">@month</span> <span class="o">=</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%B&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>$ vi view/index.xhtml
+</code></pre>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div&gt;</span>
+</span><span class='line'>  #{@month}
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ramaze maps routes using controllers, by default <code>/</code> is mapped in <code>MainController</code>. Case want a route like <code>/month</code> then must be created a controller &lsquo;MonthController&rsquo; or must be specified a route in controller. See the docs by <a href="http://ramaze.net/">ramaze</a> for more info.</p>
+
+<h3>Runing</h3>
+
+<pre><code>$ rake ramaze:start
+# access localhost:7000
+</code></pre>
+
+<h3>Heroku</h3>
+
+<pre><code>$ git add -A
+$ git commit -a -m "..."
+$ heroku create &lt;APP_NAME&gt;
+$ git push heroku master
+</code></pre>
+
+<p><strong>Project</strong> <br/>
+Heroku: <a href="http://currentmonth.herokuapp.com">http://currentmonth.herokuapp.com</a> <br />
+Github: <a href="https://github.com/nicolaslazartekaqui/currentmonth">https://github.com/nicolaslazartekaqui/currentmonth</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/04/02/sinatra-response-in-json/">Sinatra - Response in JSON</a></h1>
     
     
@@ -102,7 +202,7 @@ source &quot;https://rubygems.org &hellip;">
   
 
 
-<time datetime="2014-04-02T22:33:01-03:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2014</time>
+<time datetime="2014-04-02T00:33:01-03:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2014</time>
         
       </p>
     
@@ -788,6 +888,10 @@ Make sure that `gem install rmagick -v '2.13.2'` succeeds before bundling.
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/02/ramaze-starting/">Ramaze - Starting</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/02/sinatra-response-in-json/">Sinatra - Response in JSON</a>
       </li>
     
@@ -801,10 +905,6 @@ Make sure that `gem install rmagick -v '2.13.2'` succeeds before bundling.
     
       <li class="post">
         <a href="/blog/2014/03/29/octopress-how-to-update/">Octopress - How to Update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/21/vim-convert-text-to-lowercase-or-uppercase/">Vim - Convert Text to Lowercase or Uppercase</a>
       </li>
     
   </ul>

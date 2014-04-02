@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ramaze | Nícolas Lazarte Kaqui]]></title>
+  <link href="http://nicolaslazartekaqui.github.io/blog/categories/ramaze/atom.xml" rel="self"/>
+  <link href="http://nicolaslazartekaqui.github.io/"/>
+  <updated>2014-04-02T00:58:13-03:00</updated>
+  <id>http://nicolaslazartekaqui.github.io/</id>
+  <author>
+    <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
+    <email><![CDATA[nicolaslazartekaqui@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ramaze - Starting]]></title>
+    <link href="http://nicolaslazartekaqui.github.io/blog/2014/04/02/ramaze-starting/"/>
+    <updated>2014-04-02T00:35:33-03:00</updated>
+    <id>http://nicolaslazartekaqui.github.io/blog/2014/04/02/ramaze-starting</id>
+    <content type="html"><![CDATA[<blockquote><p>Best way to learn? Building.</p></blockquote>
+
+<p>Buiding a simple application with <a href="http://ramaze.net/">ramaze</a> and deploy in <a href="http://heroku.com">heroku</a> to remember what is current month :).</p>
+
+<h3>Ramaze</h3>
+
+<p>Using framework generator to create your app.</p>
+
+<pre><code>$ gem install ramaze
+$ ramaze create currentmonth
+$ bundle install
+$ cd currentmonth
+</code></pre>
+
+<h3>Removing examples</h3>
+
+<pre><code>$ rm -rf layout public view/index.xhtml controller/main.rb
+</code></pre>
+
+<p>If we need the files, then we create.</p>
+
+<h3>Coding</h3>
+
+<pre><code>$ vi controller/main.rb
+</code></pre>
+
+<p>``` ruby controller.rb
+class MainController &lt; Controller
+  def index</p>
+
+<pre><code>@month = Time.now.strftime('%B')
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<pre><code>$ vi view/index.xhtml
+</code></pre>
+
+<p>``` html</p>
+
+<div>
+  #{@month}
+</div>
+
+
+<p>```</p>
+
+<p>Ramaze maps routes using controllers, by default <code>/</code> is mapped in <code>MainController</code>. Case want a route like <code>/month</code> then must be created a controller &lsquo;MonthController&rsquo; or must be specified a route in controller. See the docs by <a href="http://ramaze.net/">ramaze</a> for more info.</p>
+
+<h3>Runing</h3>
+
+<pre><code>$ rake ramaze:start
+# access localhost:7000
+</code></pre>
+
+<h3>Heroku</h3>
+
+<pre><code>$ git add -A
+$ git commit -a -m "..."
+$ heroku create &lt;APP_NAME&gt;
+$ git push heroku master
+</code></pre>
+
+<p><strong>Project</strong> <br/>
+Heroku: <a href="http://currentmonth.herokuapp.com">http://currentmonth.herokuapp.com</a> <br />
+Github: <a href="https://github.com/nicolaslazartekaqui/currentmonth">https://github.com/nicolaslazartekaqui/currentmonth</a></p>
+]]></content>
+  </entry>
+  
+</feed>
