@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Postgres - How to Work With Dump - Nícolas Lazarte Kaqui</title>
+  <title>Sinatra - Starting - Nícolas Lazarte Kaqui</title>
   <meta name="author" content="Nícolas Lazarte Kaqui">
 
   
-  <meta name="description" content="Simple tip. Exporting To save one specific database in a dumpfiles, just do $ pg_dump -U username dbname -f dumpfile.sql or all databases $ &hellip;">
+  <meta name="description" content="Best way to learn? Building. Buiding a simple application with sinatra and deploy in heroku to remember what is current year :). $ mkdir currentyear &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump">
+  <link rel="canonical" href="http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Nícolas Lazarte Kaqui" type="application/atom+xml">
@@ -78,7 +78,7 @@
   
   <header>
     
-      <h1 class="entry-title">Postgres - How to Work With Dump</h1>
+      <h1 class="entry-title">Sinatra - Starting</h1>
     
     
       <p class="meta">
@@ -94,35 +94,120 @@
   
 
 
-<time datetime="2013-03-21T13:27:00-03:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
+<time datetime="2014-04-01T17:26:41-03:00" pubdate data-updated="true">Apr 1<span>st</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Simple tip.</p>
+<div class="entry-content"><blockquote><p>Best way to learn? Building.</p></blockquote>
 
-<h4>Exporting</h4>
+<p>Buiding a simple application with <a href="http://www.sinatrarb.com">sinatra</a> and deploy in <a href="http://heroku.com">heroku</a> to remember what is current year :).</p>
 
-<p>To save one specific database in a dumpfiles, just do</p>
-
-<pre><code>$ pg_dump -U username dbname -f dumpfile.sql
+<pre><code>$ mkdir currentyear
+$ cd currentyear
 </code></pre>
 
-<p>or all databases</p>
+<h3>Bundler</h3>
 
-<pre><code>$ pg_dumpall -U username &gt; dumpfile.sql
+<p><em>Why?</em> Why not?</p>
+
+<pre><code>$ gem install bundler
 </code></pre>
 
-<h4>Importing</h4>
+<h3>Gemfile</h3>
 
-<p>To import a sql dump in postgres, do</p>
-
-<pre><code>$ psql -d dbname -U username -f dumpfile.sql
+<pre><code>$ vi Gemfile
 </code></pre>
 
-<p>Done, now you can save and recover your database. (:</p>
+<figure class='code'><figcaption><span>Gemfile</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">ruby</span> <span class="s2">&quot;2.0.0&quot;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span><span class="p">,</span> <span class="s1">&#39;1.1.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h3>Coding</h3>
+
+<pre><code>$ vi web.rb
+</code></pre>
+
+<figure class='code'><figcaption><span>web.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Runing</h3>
+
+<pre><code>$ ruby web.rb
+# access localhost:4567
+</code></pre>
+
+<h3>ERB</h3>
+
+<pre><code>$ vi web.rb
+</code></pre>
+
+<figure class='code'><figcaption><span>web.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">erb</span> <span class="ss">:index</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>$ mkdir views
+$ vi views/index.erb
+</code></pre>
+
+<figure class='code'><figcaption><span>views/index.erb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;div&gt;</span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">year</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Heroku</h3>
+
+<pre><code>$ vi Procfile
+</code></pre>
+
+<figure class='code'><figcaption><span>Procfile</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>web: bundle <span class="nb">exec </span>ruby web.rb -p <span class="nv">$PORT</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>$ heroku create &lt;APP_NAME&gt;
+$ git push heroku master
+</code></pre>
+
+<h3>Result</h3>
+
+<p>app: <a href="http://currentyear.herokuapp.com">http://currentyear.herokuapp.com</a> <br />
+code: <a href="https://github.com/nicolaslazartekaqui/currentyear">https://github.com/nicolaslazartekaqui/currentyear</a></p>
 </div>
 
 
@@ -145,12 +230,12 @@
   
 
 
-<time datetime="2013-03-21T13:27:00-03:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
+<time datetime="2014-04-01T17:26:41-03:00" pubdate data-updated="true">Apr 1<span>st</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/psql/'>psql</a>
+    <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/sinatra/'>sinatra</a>
   
 </span>
 
@@ -159,7 +244,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump/" data-via="nicolaslazartek" data-counturl="http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting/" data-via="nicolaslazartek" data-counturl="http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -172,10 +257,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/" title="Previous Post: Ruby - Solving error to install gem rmagick in debian">&laquo; Ruby - Solving error to install gem rmagick in debian</a>
+        <a class="basic-alignment left" href="/blog/2014/04/01/octopress-how-to-blog-basic/" title="Previous Post: Octopress - How to blog (basic)">&laquo; Octopress - How to blog (basic)</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/03/21/vim-convert-text-to-lowercase-or-uppercase/" title="Next Post: Vim - Convert text to lowercase or uppercase">Vim - Convert text to lowercase or uppercase &raquo;</a>
       
     </p>
   </footer>
@@ -279,8 +362,8 @@ Included file 'asides/twitter.html' not found in _includes directory
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump/';
-        var disqus_url = 'http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump/';
+        var disqus_identifier = 'http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting/';
+        var disqus_url = 'http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Nícolas Lazarte Kaqui]]></title>
   <link href="http://nicolaslazartekaqui.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://nicolaslazartekaqui.github.io/"/>
-  <updated>2014-04-01T17:20:10-03:00</updated>
+  <updated>2014-04-01T21:49:17-03:00</updated>
   <id>http://nicolaslazartekaqui.github.io/</id>
   <author>
     <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
@@ -12,6 +12,106 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sinatra - Starting]]></title>
+    <link href="http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting/"/>
+    <updated>2014-04-01T17:26:41-03:00</updated>
+    <id>http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting</id>
+    <content type="html"><![CDATA[<blockquote><p>Best way to learn? Building.</p></blockquote>
+
+<p>Buiding a simple application with <a href="http://www.sinatrarb.com">sinatra</a> and deploy in <a href="http://heroku.com">heroku</a> to remember what is current year :).</p>
+
+<pre><code>$ mkdir currentyear
+$ cd currentyear
+</code></pre>
+
+<h3>Bundler</h3>
+
+<p><em>Why?</em> Why not?</p>
+
+<pre><code>$ gem install bundler
+</code></pre>
+
+<h3>Gemfile</h3>
+
+<pre><code>$ vi Gemfile
+</code></pre>
+
+<p>``` ruby Gemfile
+source &ldquo;<a href="https://rubygems.org">https://rubygems.org</a>&rdquo;</p>
+
+<p>ruby &ldquo;2.0.0&rdquo;
+gem &lsquo;sinatra&rsquo;, &lsquo;1.1.0&rsquo;
+```</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h3>Coding</h3>
+
+<pre><code>$ vi web.rb
+</code></pre>
+
+<p>``` ruby web.rb
+require &lsquo;sinatra&rsquo;</p>
+
+<p>get &lsquo;/&rsquo; do
+  &ldquo;#{Time.now.year}&rdquo;
+end
+```</p>
+
+<h3>Runing</h3>
+
+<pre><code>$ ruby web.rb
+# access localhost:4567
+</code></pre>
+
+<h3>ERB</h3>
+
+<pre><code>$ vi web.rb
+</code></pre>
+
+<p>``` ruby web.rb
+require &lsquo;sinatra&rsquo;</p>
+
+<p>get &lsquo;/&rsquo; do
+  erb :index
+end
+```</p>
+
+<pre><code>$ mkdir views
+$ vi views/index.erb
+</code></pre>
+
+<p>``` erb views/index.erb</p>
+
+<div>
+  <%= Time.now.year %>
+</div>
+
+
+<p>```</p>
+
+<h3>Heroku</h3>
+
+<pre><code>$ vi Procfile
+</code></pre>
+
+<p><code>bash Procfile
+web: bundle exec ruby web.rb -p $PORT
+</code></p>
+
+<pre><code>$ heroku create &lt;APP_NAME&gt;
+$ git push heroku master
+</code></pre>
+
+<h3>Result</h3>
+
+<p>app: <a href="http://currentyear.herokuapp.com">http://currentyear.herokuapp.com</a> <br />
+code: <a href="https://github.com/nicolaslazartekaqui/currentyear">https://github.com/nicolaslazartekaqui/currentyear</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby - Solving Error to Install Gem Rmagick in Debian]]></title>
