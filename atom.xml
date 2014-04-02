@@ -4,7 +4,7 @@
   <title><![CDATA[Nícolas Lazarte Kaqui]]></title>
   <link href="http://nicolaslazartekaqui.github.io/atom.xml" rel="self"/>
   <link href="http://nicolaslazartekaqui.github.io/"/>
-  <updated>2014-04-01T22:21:06-03:00</updated>
+  <updated>2014-04-01T22:54:44-03:00</updated>
   <id>http://nicolaslazartekaqui.github.io/</id>
   <author>
     <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
@@ -12,6 +12,80 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sinatra - Response in JSON]]></title>
+    <link href="http://nicolaslazartekaqui.github.io/blog/2014/04/02/sinatra-response-in-json/"/>
+    <updated>2014-04-02T22:33:01-03:00</updated>
+    <id>http://nicolaslazartekaqui.github.io/blog/2014/04/02/sinatra-response-in-json</id>
+    <content type="html"><![CDATA[<p><a href="http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting/">Continuing</a> with my awesome <code>sinatra</code> project. Adding a response in json format.</p>
+
+<h3>Gemfile</h3>
+
+<pre><code>$ vi Gemfile
+</code></pre>
+
+<figure class='code'><figcaption><span>Gemfile</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">ruby</span> <span class="s2">&quot;2.0.0&quot;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span><span class="p">,</span> <span class="s1">&#39;1.1.0&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;json&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h3>Coding</h3>
+
+<pre><code>$ vi web.rb
+</code></pre>
+
+<figure class='code'><figcaption><span>web.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">erb</span> <span class="ss">:index</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">get</span> <span class="s1">&#39;/json&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">content_type</span> <span class="ss">:json</span>
+</span><span class='line'>  <span class="p">{</span> <span class="ss">year</span><span class="p">:</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">year</span> <span class="p">}</span><span class="o">.</span><span class="n">to_json</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Runing</h3>
+
+<pre><code>$ ruby web.rb
+# access localhost:4567/json
+</code></pre>
+
+<h3>Deploy</h3>
+
+<pre><code>$ git commit -a -m "..."
+$ git push heroku master
+</code></pre>
+
+<p><strong>Project</strong> <br/>
+Heroku: <a href="http://currentyear.herokuapp.com">http://currentyear.herokuapp.com</a> <br />
+Github: <a href="https://github.com/nicolaslazartekaqui/currentyear">https://github.com/nicolaslazartekaqui/currentyear</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sinatra - Starting]]></title>
@@ -117,14 +191,15 @@ $ vi views/index.erb
 </span></code></pre></td></tr></table></div></figure>
 
 
-<pre><code>$ heroku create &lt;APP_NAME&gt;
+<pre><code>$ git add -A
+$ git commit -a -m "..."
+$ heroku create &lt;APP_NAME&gt;
 $ git push heroku master
 </code></pre>
 
-<h3>Result</h3>
-
-<p>app: <a href="http://currentyear.herokuapp.com">http://currentyear.herokuapp.com</a> <br />
-code: <a href="https://github.com/nicolaslazartekaqui/currentyear">https://github.com/nicolaslazartekaqui/currentyear</a></p>
+<p><strong>Project</strong> <br/>
+Heroku: <a href="http://currentyear.herokuapp.com">http://currentyear.herokuapp.com</a> <br />
+Github: <a href="https://github.com/nicolaslazartekaqui/currentyear">https://github.com/nicolaslazartekaqui/currentyear</a></p>
 ]]></content>
   </entry>
   

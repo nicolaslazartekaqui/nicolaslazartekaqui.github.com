@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Json | Nícolas Lazarte Kaqui]]></title>
+  <link href="http://nicolaslazartekaqui.github.io/blog/categories/json/atom.xml" rel="self"/>
+  <link href="http://nicolaslazartekaqui.github.io/"/>
+  <updated>2014-04-01T22:54:44-03:00</updated>
+  <id>http://nicolaslazartekaqui.github.io/</id>
+  <author>
+    <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
+    <email><![CDATA[nicolaslazartekaqui@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sinatra - Response in JSON]]></title>
+    <link href="http://nicolaslazartekaqui.github.io/blog/2014/04/02/sinatra-response-in-json/"/>
+    <updated>2014-04-02T22:33:01-03:00</updated>
+    <id>http://nicolaslazartekaqui.github.io/blog/2014/04/02/sinatra-response-in-json</id>
+    <content type="html"><![CDATA[<p><a href="http://nicolaslazartekaqui.github.io/blog/2014/04/01/sinatra-starting/">Continuing</a> with my awesome <code>sinatra</code> project. Adding a response in json format.</p>
+
+<h3>Gemfile</h3>
+
+<pre><code>$ vi Gemfile
+</code></pre>
+
+<p>``` ruby Gemfile
+source &ldquo;<a href="https://rubygems.org">https://rubygems.org</a>&rdquo;</p>
+
+<p>ruby &ldquo;2.0.0&rdquo;
+gem &lsquo;sinatra&rsquo;, &lsquo;1.1.0&rsquo;
+gem &lsquo;json&rsquo;
+```</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h3>Coding</h3>
+
+<pre><code>$ vi web.rb
+</code></pre>
+
+<p>``` ruby web.rb
+require &lsquo;sinatra&rsquo;</p>
+
+<p>get &lsquo;/&rsquo; do
+  erb :index
+end</p>
+
+<p>get &lsquo;/json&rsquo; do
+  content_type :json
+  { year: Time.now.year }.to_json
+end
+```</p>
+
+<h3>Runing</h3>
+
+<pre><code>$ ruby web.rb
+# access localhost:4567/json
+</code></pre>
+
+<h3>Deploy</h3>
+
+<pre><code>$ git commit -a -m "..."
+$ git push heroku master
+</code></pre>
+
+<p><strong>Project</strong> <br/>
+Heroku: <a href="http://currentyear.herokuapp.com">http://currentyear.herokuapp.com</a> <br />
+Github: <a href="https://github.com/nicolaslazartekaqui/currentyear">https://github.com/nicolaslazartekaqui/currentyear</a></p>
+]]></content>
+  </entry>
+  
+</feed>
