@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Psql | Nícolas Lazarte Kaqui]]></title>
-  <link href="http://nicolaslazartekaqui.github.io/blog/categories/psql/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Postgres, | Nícolas Lazarte Kaqui]]></title>
+  <link href="http://nicolaslazartekaqui.github.io/blog/categories/postgres/atom.xml" rel="self"/>
   <link href="http://nicolaslazartekaqui.github.io/"/>
-  <updated>2014-04-01T22:00:00-03:00</updated>
+  <updated>2014-04-01T22:21:06-03:00</updated>
   <id>http://nicolaslazartekaqui.github.io/</id>
   <author>
     <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
@@ -18,28 +18,31 @@
     <link href="http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump/"/>
     <updated>2013-03-21T13:27:00-03:00</updated>
     <id>http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump</id>
-    <content type="html"><![CDATA[<p>Simple tip.</p>
+    <content type="html"><![CDATA[<h3>SQL</h3>
 
 <h4>Exporting</h4>
 
-<p>To save one specific database in a dumpfiles, just do</p>
+<p>one base</p>
 
 <pre><code>$ pg_dump -U username dbname -f dumpfile.sql
 </code></pre>
 
-<p>or all databases</p>
+<p>all bases</p>
 
 <pre><code>$ pg_dumpall -U username &gt; dumpfile.sql
 </code></pre>
 
 <h4>Importing</h4>
 
-<p>To import a sql dump in postgres, do</p>
+<p>one base</p>
 
 <pre><code>$ psql -d dbname -U username -f dumpfile.sql
 </code></pre>
 
-<p>Done, now you can save and recover your database. (:</p>
+<p>all bases</p>
+
+<pre><code>$ psql -U username -f dumpfile.sql
+</code></pre>
 ]]></content>
   </entry>
   

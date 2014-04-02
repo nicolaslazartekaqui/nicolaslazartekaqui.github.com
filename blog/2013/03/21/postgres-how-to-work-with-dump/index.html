@@ -9,7 +9,7 @@
   <meta name="author" content="Nícolas Lazarte Kaqui">
 
   
-  <meta name="description" content="Simple tip. Exporting To save one specific database in a dumpfiles, just do $ pg_dump -U username dbname -f dumpfile.sql or all databases $ &hellip;">
+  <meta name="description" content="SQL Exporting one base $ pg_dump -U username dbname -f dumpfile.sql all bases $ pg_dumpall -U username &gt; dumpfile.sql Importing one base $ psql -d &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -101,28 +101,31 @@
   </header>
 
 
-<div class="entry-content"><p>Simple tip.</p>
+<div class="entry-content"><h3>SQL</h3>
 
 <h4>Exporting</h4>
 
-<p>To save one specific database in a dumpfiles, just do</p>
+<p>one base</p>
 
 <pre><code>$ pg_dump -U username dbname -f dumpfile.sql
 </code></pre>
 
-<p>or all databases</p>
+<p>all bases</p>
 
 <pre><code>$ pg_dumpall -U username &gt; dumpfile.sql
 </code></pre>
 
 <h4>Importing</h4>
 
-<p>To import a sql dump in postgres, do</p>
+<p>one base</p>
 
 <pre><code>$ psql -d dbname -U username -f dumpfile.sql
 </code></pre>
 
-<p>Done, now you can save and recover your database. (:</p>
+<p>all bases</p>
+
+<pre><code>$ psql -U username -f dumpfile.sql
+</code></pre>
 </div>
 
 
@@ -150,7 +153,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/psql/'>psql</a>
+    <a class='category' href='/blog/categories/docsforcoders/'>docsforcoders</a>, <a class='category' href='/blog/categories/postgres/'>postgres,</a>
   
 </span>
 

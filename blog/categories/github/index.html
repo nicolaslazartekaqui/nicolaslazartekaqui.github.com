@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ruby - Solving Error to Install Gem Rmagick in Debian - Nícolas Lazarte Kaqui</title>
+  <title>Category: Github - Nícolas Lazarte Kaqui</title>
   <meta name="author" content="Nícolas Lazarte Kaqui">
 
   
-  <meta name="description" content="Trying to install the rmagic gem I received this error $ gem install rmagick -v '2.13.2' Installing rmagick (2.13.2) with native extensions
-Gem:: &hellip;">
+  <meta name="description" content="Category: github">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Gem:: &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian">
+  <link rel="canonical" href="http://nicolaslazartekaqui.github.ioblog/categories/github">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Nícolas Lazarte Kaqui" type="application/atom+xml">
@@ -75,138 +74,36 @@ Gem:: &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Ruby - Solving Error to Install Gem Rmagick in Debian</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-21T12:58:00-03:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
-        
-      </p>
+    <h1 class="entry-title">Category: Github</h1>
     
   </header>
-
-
-<div class="entry-content"><p>Trying to install the rmagic gem I received this error</p>
-
-<pre><code>$ gem install rmagick -v '2.13.2'
-
-Installing rmagick (2.13.2) with native extensions
-Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
-
-        /home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby extconf.rb
-checking for Ruby version &gt;= 1.8.5... yes
-checking for /usr/bin/gcc... yes
-checking for Magick-config... no
-Can't install RMagick 2.13.2. Can't find Magick-config in /home/nicolas/.rbenv/versions/1.9.3-p0/bin:/usr/lib/rbenv/libexec:/home/nicolas/.rbenv/plugins/ruby-build/bin:/home/nicolas/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_05:/home/nicolas/bin:/usr/local/java/jre1.7.0_05
-
-*** extconf.rb failed ***
-Could not create Makefile due to some reason, probably lack of
-necessary libraries and/or headers.  Check the mkmf.log file for more
-details.  You may need configuration options.
-
-Provided configuration options:
-  --with-opt-dir
-  --without-opt-dir
-  --with-opt-include
-  --without-opt-include=${opt-dir}/include
-  --with-opt-lib
-  --without-opt-lib=${opt-dir}/lib
-  --with-make-prog
-  --without-make-prog
-  --srcdir=.
-  --curdir
-  --ruby=/home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby
-
-
-Gem files will remain installed in /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2 for inspection.
-Results logged to /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2/ext/RMagick/gem_make.out
-An error occurred while installing rmagick (2.13.2), and Bundler cannot continue.
-Make sure that `gem install rmagick -v '2.13.2'` succeeds before bundling.
-</code></pre>
-
-<p>This error occurs because of missing the necessary library to compile the rmagick. In Debian (I use SID/UNSTABLE version) to fix this error you must install the library <code>libmagickwand-dev</code>.</p>
-
-<pre><code>$ sudo aptitude install libmagickwand-dev
-</code></pre>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Nícolas Lazarte Kaqui</span></span>
-
-      
-
-
-
-
-
+  <div id="blog-archives" class="category">
 
 
 
   
+  <h2>2013</h2>
+
+<article>
+  
+<h1><a href="/blog/2013/02/26/github-fork-a-repo/">Github - Fork a Repo</a></h1>
+<time datetime="2013-02-26T10:17:00-03:00" pubdate><span class='month'>Feb</span> <span class='day'>26</span> <span class='year'>2013</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/tip/'>tip</a></span>
+</footer>
 
 
-<time datetime="2013-03-21T12:58:00-03:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/debian/'>debian</a>, <a class='category' href='/blog/categories/rmagick/'>rmagick</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/rubygems/'>rubygems</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/" data-via="nicolaslazartek" data-counturl="http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/" >Tweet</a>
-  
-  
-  <div class="g-plusone" data-size="medium"></div>
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/02/26/github-fork-a-repo/" title="Previous Post: Github - Fork A Repo">&laquo; Github - Fork A Repo</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/03/21/postgres-how-to-work-with-dump/" title="Next Post: Postgres - How to work with dump">Postgres - How to work with dump &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+
+  
+</article>
 
 </div>
 
@@ -299,10 +196,7 @@ Included file 'asides/twitter.html' not found in _includes directory
       var disqus_shortname = 'nicolaslazartekaquiblog';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/';
-        var disqus_url = 'http://nicolaslazartekaqui.github.io/blog/2013/03/21/ruby-solving-error-to-install-gem-rmagick-in-debian/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -9,14 +9,9 @@
   <meta name="author" content="Nícolas Lazarte Kaqui">
 
   
-  <meta name="description" content="docs for coders Mode details? Read [:documentation]. Posts 1
-2
-3
-4
-5
-6
-# create
-$ bundle exec rake new_post[&quot;Octopress - How to blog (basic)& &hellip;">
+  <meta name="description" content="Mode details? Read documentation. Posts # create
+$ bundle exec rake new_post["Octopress - How to blog (basic)"]
+# Creating new post: source/_posts/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,69 +103,43 @@ $ bundle exec rake new_post[&quot;Octopress - How to blog (basic)& &hellip;">
   </header>
 
 
-<div class="entry-content"><p><strong>docs for coders</strong></p>
-
-<p>Mode details? Read [:documentation].</p>
+<div class="entry-content"><p>Mode details? Read <a href="http://octopress.org/">documentation</a>.</p>
 
 <h3>Posts</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># create</span>
-</span><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake new_post<span class="o">[</span><span class="s2">&quot;Octopress - How to blog (basic)&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="c"># Creating new post: source/_posts/2014-04-01-octopress-how-to-blog-basic.markdown</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># write</span>
-</span><span class='line'><span class="nv">$ </span>vi <span class="nb">source</span>/_posts/2014-04-01-octopress-how-to-blog-basic.markdown
-</span></code></pre></td></tr></table></div></figure>
+<pre><code># create
+$ bundle exec rake new_post["Octopress - How to blog (basic)"]
+# Creating new post: source/_posts/2014-04-01-octopress-how-to-blog-basic.markdown
 
+# write
+$ vi source/_posts/2014-04-01-octopress-how-to-blog-basic.markdown
+</code></pre>
 
 <h3>Pages</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># create with friend url (blog/about)</span>
-</span><span class='line'><span class="nv">$ </span>rake new_page<span class="o">[</span>about<span class="o">]</span>
-</span><span class='line'><span class="c"># creates /source/about/index.markdown</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># create without friend url (blog/about.html)</span>
-</span><span class='line'><span class="nv">$ </span>rake new_page<span class="o">[</span>about.mardown<span class="o">]</span>
-</span><span class='line'><span class="c"># creates /source/about.markdown</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># write</span>
-</span><span class='line'><span class="nv">$ </span>vi <span class="nb">source</span>/...
-</span></code></pre></td></tr></table></div></figure>
+<pre><code># create with friend url (blog/about)
+$ rake new_page[about]
+# creates /source/about/index.markdown
 
+# create without friend url (blog/about.html)
+$ rake new_page[about.mardown]
+# creates /source/about.markdown
+
+# write
+$ vi source/...
+</code></pre>
 
 <h3>Preview</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake preview
-</span><span class='line'><span class="c"># acess http://localhost:4000</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ bundle exec rake preview
+# acess http://localhost:4000
+</code></pre>
 
 <h3>Deploy</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake generate
-</span><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ bundle exec rake generate
+$ bundle exec rake deploy
+</code></pre>
 </div>
 
 

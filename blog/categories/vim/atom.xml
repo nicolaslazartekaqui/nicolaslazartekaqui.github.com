@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | Nícolas Lazarte Kaqui]]></title>
   <link href="http://nicolaslazartekaqui.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://nicolaslazartekaqui.github.io/"/>
-  <updated>2014-04-01T22:00:00-03:00</updated>
+  <updated>2014-04-01T22:21:06-03:00</updated>
   <id>http://nicolaslazartekaqui.github.io/</id>
   <author>
     <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
@@ -27,9 +27,6 @@
 
 <pre><code>ggVGU
 </code></pre>
-
-<!-- more -->
-
 
 <p>look at the command <code>ggVG</code> is used to select all the text if you want you can select the text and use <code>U</code> or <code>u</code> to convert what was selected to uppercase or lowercase.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Nícolas Lazarte Kaqui]]></title>
   <link href="http://nicolaslazartekaqui.github.io/atom.xml" rel="self"/>
   <link href="http://nicolaslazartekaqui.github.io/"/>
-  <updated>2014-04-01T22:00:00-03:00</updated>
+  <updated>2014-04-01T22:21:06-03:00</updated>
   <id>http://nicolaslazartekaqui.github.io/</id>
   <author>
     <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
@@ -133,69 +133,43 @@ code: <a href="https://github.com/nicolaslazartekaqui/currentyear">https://githu
     <link href="http://nicolaslazartekaqui.github.io/blog/2014/04/01/octopress-how-to-blog-basic/"/>
     <updated>2014-04-01T16:26:39-03:00</updated>
     <id>http://nicolaslazartekaqui.github.io/blog/2014/04/01/octopress-how-to-blog-basic</id>
-    <content type="html"><![CDATA[<p><strong>docs for coders</strong></p>
-
-<p>Mode details? Read [:documentation].</p>
+    <content type="html"><![CDATA[<p>Mode details? Read <a href="http://octopress.org/">documentation</a>.</p>
 
 <h3>Posts</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># create</span>
-</span><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake new_post<span class="o">[</span><span class="s2">&quot;Octopress - How to blog (basic)&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="c"># Creating new post: source/_posts/2014-04-01-octopress-how-to-blog-basic.markdown</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># write</span>
-</span><span class='line'><span class="nv">$ </span>vi <span class="nb">source</span>/_posts/2014-04-01-octopress-how-to-blog-basic.markdown
-</span></code></pre></td></tr></table></div></figure>
+<pre><code># create
+$ bundle exec rake new_post["Octopress - How to blog (basic)"]
+# Creating new post: source/_posts/2014-04-01-octopress-how-to-blog-basic.markdown
 
+# write
+$ vi source/_posts/2014-04-01-octopress-how-to-blog-basic.markdown
+</code></pre>
 
 <h3>Pages</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># create with friend url (blog/about)</span>
-</span><span class='line'><span class="nv">$ </span>rake new_page<span class="o">[</span>about<span class="o">]</span>
-</span><span class='line'><span class="c"># creates /source/about/index.markdown</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># create without friend url (blog/about.html)</span>
-</span><span class='line'><span class="nv">$ </span>rake new_page<span class="o">[</span>about.mardown<span class="o">]</span>
-</span><span class='line'><span class="c"># creates /source/about.markdown</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># write</span>
-</span><span class='line'><span class="nv">$ </span>vi <span class="nb">source</span>/...
-</span></code></pre></td></tr></table></div></figure>
+<pre><code># create with friend url (blog/about)
+$ rake new_page[about]
+# creates /source/about/index.markdown
 
+# create without friend url (blog/about.html)
+$ rake new_page[about.mardown]
+# creates /source/about.markdown
+
+# write
+$ vi source/...
+</code></pre>
 
 <h3>Preview</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake preview
-</span><span class='line'><span class="c"># acess http://localhost:4000</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ bundle exec rake preview
+# acess http://localhost:4000
+</code></pre>
 
 <h3>Deploy</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake generate
-</span><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ bundle exec rake generate
+$ bundle exec rake deploy
+</code></pre>
 ]]></content>
   </entry>
   
@@ -206,44 +180,26 @@ code: <a href="https://github.com/nicolaslazartekaqui/currentyear">https://githu
     <id>http://nicolaslazartekaqui.github.io/blog/2014/03/29/octopress-how-to-update</id>
     <content type="html"><![CDATA[<p>I use octopress through <a href="https://github.com/nicolaslazartekaqui/nicolaslazartekaqui.github.io">github</a>. I have two branchs, one with the content generated by octopress (master) and the other which is the source code to the octopress (source).</p>
 
-<h2>Update</h2>
+<h3>Update</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git checkout <span class="nb">source</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># case you dont have octopress remote</span>
-</span><span class='line'><span class="nv">$ </span>git remote add octopress https://github.com/imathis/octopress.git
-</span><span class='line'>
-</span><span class='line'><span class="c"># pull modifications</span>
-</span><span class='line'><span class="nv">$ </span>git pull --rebase octopress master
-</span><span class='line'>
-</span><span class='line'><span class="c"># case have conflicts, resolve (yes, you can!)</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># update</span>
-</span><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake update_source
-</span><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake update_style
-</span><span class='line'>
-</span><span class='line'><span class="c"># generate and deploy</span>
-</span><span class='line'><span class="nv">$ </span>bundle rake generate
-</span><span class='line'><span class="nv">$ </span>bundle rake deploy
-</span></code></pre></td></tr></table></div></figure>
+<pre><code>$ git checkout source
 
+# case you dont have octopress remote
+$ git remote add octopress https://github.com/imathis/octopress.git
+
+# pull modifications
+$ git pull --rebase octopress master
+
+# case have conflicts, resolve (yes, you can!)
+
+# update
+$ bundle exec rake update_source
+$ bundle exec rake update_style
+
+# generate and deploy
+$ bundle rake generate
+$ bundle rake deploy
+</code></pre>
 
 <p><strong>Why you dont use oficial documentation?</strong> <br>
 Yes i use, this page is a resume to the documentation. Sometimes I prefer the resume. :)</p>
@@ -264,9 +220,6 @@ Yes i use, this page is a resume to the documentation. Sometimes I prefer the re
 
 <pre><code>ggVGU
 </code></pre>
-
-<!-- more -->
-
 
 <p>look at the command <code>ggVG</code> is used to select all the text if you want you can select the text and use <code>U</code> or <code>u</code> to convert what was selected to uppercase or lowercase.</p>
 
@@ -292,28 +245,31 @@ Yes i use, this page is a resume to the documentation. Sometimes I prefer the re
     <link href="http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump/"/>
     <updated>2013-03-21T13:27:00-03:00</updated>
     <id>http://nicolaslazartekaqui.github.io/blog/2013/03/21/postgres-how-to-work-with-dump</id>
-    <content type="html"><![CDATA[<p>Simple tip.</p>
+    <content type="html"><![CDATA[<h3>SQL</h3>
 
 <h4>Exporting</h4>
 
-<p>To save one specific database in a dumpfiles, just do</p>
+<p>one base</p>
 
 <pre><code>$ pg_dump -U username dbname -f dumpfile.sql
 </code></pre>
 
-<p>or all databases</p>
+<p>all bases</p>
 
 <pre><code>$ pg_dumpall -U username &gt; dumpfile.sql
 </code></pre>
 
 <h4>Importing</h4>
 
-<p>To import a sql dump in postgres, do</p>
+<p>one base</p>
 
 <pre><code>$ psql -d dbname -U username -f dumpfile.sql
 </code></pre>
 
-<p>Done, now you can save and recover your database. (:</p>
+<p>all bases</p>
+
+<pre><code>$ psql -U username -f dumpfile.sql
+</code></pre>
 ]]></content>
   </entry>
   
@@ -325,86 +281,45 @@ Yes i use, this page is a resume to the documentation. Sometimes I prefer the re
     <content type="html"><![CDATA[<p>Trying to install the rmagic gem I received this error</p>
 
 <pre><code>$ gem install rmagick -v '2.13.2'
+
+Installing rmagick (2.13.2) with native extensions
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        /home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby extconf.rb
+checking for Ruby version &gt;= 1.8.5... yes
+checking for /usr/bin/gcc... yes
+checking for Magick-config... no
+Can't install RMagick 2.13.2. Can't find Magick-config in /home/nicolas/.rbenv/versions/1.9.3-p0/bin:/usr/lib/rbenv/libexec:/home/nicolas/.rbenv/plugins/ruby-build/bin:/home/nicolas/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_05:/home/nicolas/bin:/usr/local/java/jre1.7.0_05
+
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+  --with-opt-dir
+  --without-opt-dir
+  --with-opt-include
+  --without-opt-include=${opt-dir}/include
+  --with-opt-lib
+  --without-opt-lib=${opt-dir}/lib
+  --with-make-prog
+  --without-make-prog
+  --srcdir=.
+  --curdir
+  --ruby=/home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby
+
+
+Gem files will remain installed in /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2 for inspection.
+Results logged to /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2/ext/RMagick/gem_make.out
+An error occurred while installing rmagick (2.13.2), and Bundler cannot continue.
+Make sure that `gem install rmagick -v '2.13.2'` succeeds before bundling.
 </code></pre>
-
-<!-- more -->
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>Installing rmagick <span class="o">(</span>2.13.2<span class="o">)</span> with native extensions
-</span><span class='line'>Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
-</span><span class='line'>
-</span><span class='line'>        /home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby extconf.rb
-</span><span class='line'>checking <span class="k">for </span>Ruby version &gt;<span class="o">=</span> 1.8.5... yes
-</span><span class='line'>checking <span class="k">for</span> /usr/bin/gcc... yes
-</span><span class='line'>checking <span class="k">for </span>Magick-config... no
-</span><span class='line'>Can<span class="s1">&#39;t install RMagick 2.13.2. Can&#39;</span>t find Magick-config in /home/nicolas/.rbenv/versions/1.9.3-p0/bin:/usr/lib/rbenv/libexec:/home/nicolas/.rbenv/plugins/ruby-build/bin:/home/nicolas/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_04:/home/nicolas/bin:/usr/local/java/jre1.7.0_05:/home/nicolas/bin:/usr/local/java/jre1.7.0_05
-</span><span class='line'>
-</span><span class='line'>*** extconf.rb failed ***
-</span><span class='line'>Could not create Makefile due to some reason, probably lack of
-</span><span class='line'>necessary libraries and/or headers.  Check the mkmf.log file <span class="k">for </span>more
-</span><span class='line'>details.  You may need configuration options.
-</span><span class='line'>
-</span><span class='line'>Provided configuration options:
-</span><span class='line'>  --with-opt-dir
-</span><span class='line'>  --without-opt-dir
-</span><span class='line'>  --with-opt-include
-</span><span class='line'>  --without-opt-include<span class="o">=</span><span class="k">${</span><span class="nv">opt</span><span class="p">-dir</span><span class="k">}</span>/include
-</span><span class='line'>  --with-opt-lib
-</span><span class='line'>  --without-opt-lib<span class="o">=</span><span class="k">${</span><span class="nv">opt</span><span class="p">-dir</span><span class="k">}</span>/lib
-</span><span class='line'>  --with-make-prog
-</span><span class='line'>  --without-make-prog
-</span><span class='line'>  --srcdir<span class="o">=</span>.
-</span><span class='line'>  --curdir
-</span><span class='line'>  --ruby<span class="o">=</span>/home/nicolas/.rbenv/versions/1.9.3-p0/bin/ruby
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>Gem files will remain installed in /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2 <span class="k">for </span>inspection.
-</span><span class='line'>Results logged to /home/nicolas/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/rmagick-2.13.2/ext/RMagick/gem_make.out
-</span><span class='line'>An error occurred <span class="k">while </span>installing rmagick <span class="o">(</span>2.13.2<span class="o">)</span>, and Bundler cannot <span class="k">continue</span>.
-</span><span class='line'>Make sure that <span class="sb">`</span>gem install rmagick -v <span class="s1">&#39;2.13.2&#39;</span><span class="sb">`</span> succeeds before bundling.
-</span></code></pre></td></tr></table></div></figure>
-
 
 <p>This error occurs because of missing the necessary library to compile the rmagick. In Debian (I use SID/UNSTABLE version) to fix this error you must install the library <code>libmagickwand-dev</code>.</p>
 
 <pre><code>$ sudo aptitude install libmagickwand-dev
 </code></pre>
-
-<p>Done, now you can install the gem rmagick and continue working happy. (:</p>
 ]]></content>
   </entry>
   
@@ -413,7 +328,7 @@ Yes i use, this page is a resume to the documentation. Sometimes I prefer the re
     <link href="http://nicolaslazartekaqui.github.io/blog/2013/02/26/github-fork-a-repo/"/>
     <updated>2013-02-26T10:17:00-03:00</updated>
     <id>http://nicolaslazartekaqui.github.io/blog/2013/02/26/github-fork-a-repo</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Quick tip: <a href="https://help.github.com/articles/fork-a-repo">https://help.github.com/articles/fork-a-repo</a></p>
 ]]></content>
   </entry>
   
@@ -422,9 +337,7 @@ Yes i use, this page is a resume to the documentation. Sometimes I prefer the re
     <link href="http://nicolaslazartekaqui.github.io/blog/2013/02/25/git-stash-your-modifications/"/>
     <updated>2013-02-25T16:38:00-03:00</updated>
     <id>http://nicolaslazartekaqui.github.io/blog/2013/02/25/git-stash-your-modifications</id>
-    <content type="html"><![CDATA[<p><em>sorry for my english, I&rsquo;m trying to get better :)</em></p>
-
-<p>During the development of a project in Git, it may be necessary to modify the branch without losing changes already made ​​in another branch.</p>
+    <content type="html"><![CDATA[<p>During the development of a project in Git, it may be necessary to modify the branch without losing changes already made in another branch.</p>
 
 <p>Git allows you to save the changes made and work on them later using the <code>git-stash</code>.</p>
 
@@ -472,7 +385,7 @@ Yes i use, this page is a resume to the documentation. Sometimes I prefer the re
 
 <p>To drop the stash use the command <code>git stash drop &lt;NAME_STASH&gt;</code> or when reapply the stash you can use the command <code>git stash pop &lt;NAME_STASH&gt;</code>, this way you reapply and drop the stash at the same time.</p>
 
-<p>Is possible to do more things with this git tool, see more in this <a href="http://git-scm.com/book/en/Git-Tools-Stashing#Creating-a-Branch-from-a-Stash">link</a> [1].</p>
+<p>Is possible to do more things with this git tool, see more in this <a href="http://git-scm.com/book/en/Git-Tools-Stashing#Creating-a-Branch-from-a-Stash">link</a>.</p>
 ]]></content>
   </entry>
   

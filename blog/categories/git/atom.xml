@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | Nícolas Lazarte Kaqui]]></title>
   <link href="http://nicolaslazartekaqui.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://nicolaslazartekaqui.github.io/"/>
-  <updated>2014-04-01T22:00:00-03:00</updated>
+  <updated>2014-04-01T22:21:06-03:00</updated>
   <id>http://nicolaslazartekaqui.github.io/</id>
   <author>
     <name><![CDATA[Nícolas Lazarte Kaqui]]></name>
@@ -14,13 +14,20 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Github - Fork a Repo]]></title>
+    <link href="http://nicolaslazartekaqui.github.io/blog/2013/02/26/github-fork-a-repo/"/>
+    <updated>2013-02-26T10:17:00-03:00</updated>
+    <id>http://nicolaslazartekaqui.github.io/blog/2013/02/26/github-fork-a-repo</id>
+    <content type="html"><![CDATA[<p>Quick tip: <a href="https://help.github.com/articles/fork-a-repo">https://help.github.com/articles/fork-a-repo</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Git - Stash Your Modifications]]></title>
     <link href="http://nicolaslazartekaqui.github.io/blog/2013/02/25/git-stash-your-modifications/"/>
     <updated>2013-02-25T16:38:00-03:00</updated>
     <id>http://nicolaslazartekaqui.github.io/blog/2013/02/25/git-stash-your-modifications</id>
-    <content type="html"><![CDATA[<p><em>sorry for my english, I&rsquo;m trying to get better :)</em></p>
-
-<p>During the development of a project in Git, it may be necessary to modify the branch without losing changes already made ​​in another branch.</p>
+    <content type="html"><![CDATA[<p>During the development of a project in Git, it may be necessary to modify the branch without losing changes already made in another branch.</p>
 
 <p>Git allows you to save the changes made and work on them later using the <code>git-stash</code>.</p>
 
@@ -68,7 +75,7 @@
 
 <p>To drop the stash use the command <code>git stash drop &lt;NAME_STASH&gt;</code> or when reapply the stash you can use the command <code>git stash pop &lt;NAME_STASH&gt;</code>, this way you reapply and drop the stash at the same time.</p>
 
-<p>Is possible to do more things with this git tool, see more in this <a href="http://git-scm.com/book/en/Git-Tools-Stashing#Creating-a-Branch-from-a-Stash">link</a> [1].</p>
+<p>Is possible to do more things with this git tool, see more in this <a href="http://git-scm.com/book/en/Git-Tools-Stashing#Creating-a-Branch-from-a-Stash">link</a>.</p>
 ]]></content>
   </entry>
   
